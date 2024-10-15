@@ -14,7 +14,7 @@
         }
         header {
             text-align: center;
-            background: #333;
+            background: #444;
             color: #fff;
             padding: 10px 0;
         }
@@ -42,9 +42,19 @@
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            cursor: pointer; /* Add pointer cursor */
+            transition: background-color 0.3s; /* Smooth transition */
         }
-        .car h3 {
-            margin: 0;
+        .car:hover {
+            background-color: #e0e0e0; /* Change background on hover */
+        }
+        .specs {
+            display: none; /* Initially hide specs */
+            margin-top: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -72,70 +82,82 @@
     <section id="cars">
         <h2>Our Retro Cars</h2>
 
-        <div class="car">
+        <div class="car" onclick="toggleSpecs('mustang-specs')">
             <h3>Ford Mustang (1965)</h3>
-            <p><strong>Specs:</strong></p>
-            <ul>
-                <li>Engine: 4.7L V8</li>
-                <li>Horsepower: 271 hp</li>
-                <li>0-60 mph: 6.4 seconds</li>
-                <li>Top Speed: 130 mph</li>
-            </ul>
+            <div class="specs" id="mustang-specs">
+                <p><strong>Specs:</strong></p>
+                <ul>
+                    <li>Engine: 4.7L V8</li>
+                    <li>Horsepower: 271 hp</li>
+                    <li>0-60 mph: 6.4 seconds</li>
+                    <li>Top Speed: 130 mph</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="car">
+        <div class="car" onclick="toggleSpecs('camaro-specs')">
             <h3>Chevrolet Camaro (1969)</h3>
-            <p><strong>Specs:</strong></p>
-            <ul>
-                <li>Engine: 5.7L V8</li>
-                <li>Horsepower: 350 hp</li>
-                <li>0-60 mph: 6.5 seconds</li>
-                <li>Top Speed: 130 mph</li>
-            </ul>
+            <div class="specs" id="camaro-specs">
+                <p><strong>Specs:</strong></p>
+                <ul>
+                    <li>Engine: 5.7L V8</li>
+                    <li>Horsepower: 350 hp</li>
+                    <li>0-60 mph: 6.5 seconds</li>
+                    <li>Top Speed: 130 mph</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="car">
+        <div class="car" onclick="toggleSpecs('porsche-specs')">
             <h3>Porsche 911 (1973)</h3>
-            <p><strong>Specs:</strong></p>
-            <ul>
-                <li>Engine: 2.4L Flat-6</li>
-                <li>Horsepower: 165 hp</li>
-                <li>0-60 mph: 6.5 seconds</li>
-                <li>Top Speed: 140 mph</li>
-            </ul>
+            <div class="specs" id="porsche-specs">
+                <p><strong>Specs:</strong></p>
+                <ul>
+                    <li>Engine: 2.4L Flat-6</li>
+                    <li>Horsepower: 165 hp</li>
+                    <li>0-60 mph: 6.5 seconds</li>
+                    <li>Top Speed: 140 mph</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="car">
+        <div class="car" onclick="toggleSpecs('beetle-specs')">
             <h3>Volkswagen Beetle (1967)</h3>
-            <p><strong>Specs:</strong></p>
-            <ul>
-                <li>Engine: 1.3L Flat-4</li>
-                <li>Horsepower: 50 hp</li>
-                <li>0-60 mph: 23 seconds</li>
-                <li>Top Speed: 70 mph</li>
-            </ul>
+            <div class="specs" id="beetle-specs">
+                <p><strong>Specs:</strong></p>
+                <ul>
+                    <li>Engine: 1.3L Flat-4</li>
+                    <li>Horsepower: 50 hp</li>
+                    <li>0-60 mph: 23 seconds</li>
+                    <li>Top Speed: 70 mph</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="car">
+        <div class="car" onclick="toggleSpecs('corvette-specs')">
             <h3>Chevrolet Corvette (1963)</h3>
-            <p><strong>Specs:</strong></p>
-            <ul>
-                <li>Engine: 5.4L V8</li>
-                <li>Horsepower: 360 hp</li>
-                <li>0-60 mph: 5.8 seconds</li>
-                <li>Top Speed: 150 mph</li>
-            </ul>
+            <div class="specs" id="corvette-specs">
+                <p><strong>Specs:</strong></p>
+                <ul>
+                    <li>Engine: 5.4L V8</li>
+                    <li>Horsepower: 360 hp</li>
+                    <li>0-60 mph: 5.8 seconds</li>
+                    <li>Top Speed: 150 mph</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="car">
+        <div class="car" onclick="toggleSpecs('jaguar-specs')">
             <h3>Jaguar E-Type (1961)</h3>
-            <p><strong>Specs:</strong></p>
-            <ul>
-                <li>Engine: 3.8L Inline-6</li>
-                <li>Horsepower: 265 hp</li>
-                <li>0-60 mph: 6.5 seconds</li>
-                <li>Top Speed: 150 mph</li>
-            </ul>
+            <div class="specs" id="jaguar-specs">
+                <p><strong>Specs:</strong></p>
+                <ul>
+                    <li>Engine: 3.8L Inline-6</li>
+                    <li>Horsepower: 265 hp</li>
+                    <li>0-60 mph: 6.5 seconds</li>
+                    <li>Top Speed: 150 mph</li>
+                </ul>
+            </div>
         </div>
     </section>
     
@@ -154,5 +176,11 @@
     </section>
 
     <script src="scripts.js"></script>
+    <script>
+        function toggleSpecs(specId) {
+            const specs = document.getElementById(specId);
+            specs.style.display = specs.style.display === 'none' || specs.style.display === '' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
